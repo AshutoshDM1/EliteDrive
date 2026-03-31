@@ -1,12 +1,14 @@
-function App() {
+import { ThemeProvider } from "./components/theme-provider";
+import Home from "./pages/Home/Home";
+import Footer from "./shared/Footer/Footer";
 
+function App() {
   return (
-    <>
-      <section id="center">
-        <h1 className="text-2xl text-red-500" >EliteDrive</h1>
-      </section>
-    </>
-  )
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Home />
+      <Footer />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
