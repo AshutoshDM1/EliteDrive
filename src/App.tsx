@@ -1,13 +1,14 @@
-import { ThemeProvider } from "./components/theme-provider";
+
+import { Route, Routes } from "react-router";
 import Home from "./pages/Home/Home";
-import Footer from "./shared/Footer/Footer";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <Home />
-      <Footer />
-    </ThemeProvider>
+    <>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+    </>
   );
 }
 

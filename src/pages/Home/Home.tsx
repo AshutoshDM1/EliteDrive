@@ -1,11 +1,20 @@
+import Footer from "@/shared/Footer/Footer";
+import Navbar from "@/shared/Navbar/Navbar";
 import Section from "@/shared/Section/Sectiont";
+import Herosection from "./Folds/Herosection";
 
 const Home = () => {
-    return (
-        <Section className="flex items-center justify-center h-screen">
-            <h1 className="text-2xl text-blue-500">EliteDrive</h1>
+  return (
+    <>
+      <div className="bg-linear-to-b from-white via-violet-300/50 via-violet-300/70 via-violet-300/50 to-white dark:from-black dark:via-violet-900 dark:via-violet-900 dark:via-violet-900 dark:to-violet-900 pb-20">
+        <Navbar />
+        <Section>
+          <Herosection />
         </Section>
-    );
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default Home;
