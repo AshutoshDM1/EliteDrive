@@ -15,16 +15,14 @@ const companyLinks: FooterLink[] = [
   { label: "About us", href: "/about" },
   { label: "Contact us", href: "/contact" },
   { label: "Blog", href: "/blog" },
-  { label: "Changelog", href: "/changelog" },
-  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 const Footer = () => {
   return (
     <footer className="bg-white dark:bg-background">
-      <Section className="px-4 sm:px-6 pt-12 pb-4">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-[1fr_auto_auto]">
-          <FooterBrand />
+      <Section className="px-4 sm:px-6 pt-12 pb-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <FooterBrand />
+        <div className="grid grid-cols-2 gap-12 mt-12 md:mt-0">
           <FooterLinkColumn title="Quick Links" links={quickLinks} />
           <FooterLinkColumn title="All Pages" links={companyLinks} />
         </div>

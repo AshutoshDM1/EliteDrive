@@ -8,29 +8,27 @@ const Herosection = () => {
     <>
       <div className="max-w-4xl mx-auto text-center py-28">
         <HeroBadge />
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6 leading-tight">
-          Bring ideas to life in <br /> just a few clicks.
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6 leading-tight">
+          Bring ideas to life in <br className="hidden md:block" /> just a few clicks.
         </h1>
         <HeroSubheadline />
         <HeroCTA />
       </div>
 
       <Section>
-        <div className="py-10 flex gap-4">
+        <div className="py-10 flex md:flex-row flex-col gap-4">
           <div className="w-full flex">
             <img
               src={HeroImage1}
               alt="Aset"
-              className="w-full h-full rounded-2xl object-cover object-top flex-1 shadow-sm"
-              style={{ aspectRatio: "16/9", minHeight: 0 }}
+              className="w-full h-full rounded-2xl object-cover object-top flex-1 shadow-sm aspect-video"
             />
           </div>
-          <div className="w-[40%] flex">
+          <div className="w-full md:w-[40%] flex">
             <img
               src={HeroImage2}
               alt="Aset"
-              className="w-full h-full rounded-2xl object-cover object-top flex-1 shadow-sm"
-              style={{ aspectRatio: "16/9", minHeight: 0 }}
+              className="w-full h-full rounded-2xl object-cover object-top flex-1 shadow-sm aspect-9/12 sm:aspect-video"
             />
           </div>
         </div>

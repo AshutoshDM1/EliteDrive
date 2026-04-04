@@ -28,7 +28,6 @@ const Navbar = () => {
       href: "/power-ups",
     },
   ];
-
   return (
     <Section className="py-4">
       <div className="flex justify-between items-center">
@@ -38,7 +37,7 @@ const Navbar = () => {
             Aset
           </span>
         </div>
-        <div className="flex items-center justify-center gap-6">
+        <div className="hidden md:flex items-center justify-center gap-6">
           {navItems.map((item) =>
             item.href.startsWith("http") ? (
               <a
@@ -61,11 +60,9 @@ const Navbar = () => {
           )}
         </div>
         <div className="flex items-center gap-2">
-          <Show when="signed-out">
             <SignInButton mode="modal" withSignUp>
               <BrandButton label="Login Now" />
             </SignInButton>
-          </Show>
           <Show when="signed-in">
             <UserButton />
           </Show>
